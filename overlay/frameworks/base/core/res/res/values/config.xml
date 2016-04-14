@@ -179,6 +179,9 @@
     <!-- Doze -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- Disable buttons backlight configurations -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+
     <!-- The RadioAccessFamilies supported by the device.
          Empty is viewed as "all".  Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
