@@ -192,6 +192,7 @@ on boot
     chown system graphics /sys/class/graphics/fb1/avi_cn0_1
     chown system graphics /sys/class/graphics/fb1/hpd
     chown system graphics /sys/class/graphics/fb1/product_description
+    chown system graphics /sys/class/graphics/fb1/s3d_mode
     chown system graphics /sys/class/graphics/fb1/vendor_name
     chown system graphics /sys/class/graphics/fb1/video_mode
     chown system graphics /sys/class/graphics/fb1/hdcp/tp
@@ -199,6 +200,7 @@ on boot
     chmod 0664 /sys/class/graphics/fb1/avi_cn0_1
     chmod 0664 /sys/class/graphics/fb1/hpd
     chmod 0664 /sys/class/graphics/fb1/product_description
+    chmod 0664 /sys/class/graphics/fb1/s3d_mode
     chmod 0664 /sys/class/graphics/fb1/vendor_name
     chmod 0664 /sys/class/graphics/fb1/video_mode
     chmod 0664 /sys/class/graphics/fb1/hdcp/tp
