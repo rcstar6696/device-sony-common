@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Lineage Build
+TARGET_UNOFFICIAL_BUILD_ID := SonyLOS
+
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 DEVICE_SPECIFIC_CAMERA_PATH := hardware/sony/camera
