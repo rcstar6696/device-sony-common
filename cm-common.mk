@@ -15,9 +15,6 @@
 # CM Build
 TARGET_UNOFFICIAL_BUILD_ID := SonyCM
 
-# Audio
-include vendor/qcom/extras/proprietary.mk
-
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 DEVICE_SPECIFIC_CAMERA_PATH := hardware/sony/camera
