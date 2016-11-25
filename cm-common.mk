@@ -25,7 +25,6 @@ BOARD_HARDWARE_CLASS += device/sony/common/cmhw
 
 # CM Packages
 PRODUCT_PACKAGES += \
-    Snap \
     Gello
 
 # Properties
