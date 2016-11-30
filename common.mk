@@ -17,6 +17,12 @@ COMMON_PATH := device/sony/common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
+# Recovery
+$(call inherit-product, device/sony/common/CommonRecovery.mk)
+
+# Rcstar AOSP
+$(call inherit-product, device/sony/common/Common-8974-Sony-Project.mk)
+
 # Common Specific Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
