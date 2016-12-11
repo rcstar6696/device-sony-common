@@ -20,6 +20,10 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 DEVICE_SPECIFIC_CAMERA_PATH := hardware/sony/camera
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
+# DataServices
+DEVICE_SPECIFIC_DATASERVICES := hardware/sony/dataservices
+USE_DEVICE_SPECIFIC_DATASERVICES := true
+
 # Lineage Packages
 PRODUCT_PACKAGES += \
     Gello
