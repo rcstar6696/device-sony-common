@@ -19,4 +19,7 @@
     <!-- Does the device allow updating the recovery. -->
     <bool name="config_enableRecoveryUpdater">false</bool>
 
+    <!-- If the Storage Manager settings are enabled. -->
+    <bool name="config_storage_manager_settings_enabled">true</bool>
+
 </resources>
