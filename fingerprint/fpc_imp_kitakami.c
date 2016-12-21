@@ -45,7 +45,7 @@ static int qsee_load_trustlet(struct QSEECom_handle **clnt_handle,
     char* errstr;
 
     ALOGE("Starting app %s\n", fname);
-    ret = mStartApp(&mHandle, path, fname, 1024);
+    ret = mStartApp(clnt_handle, path, fname, 1024);
     if (ret < 0) {
         errstr = qsee_error_strings(ret);
         ALOGE("Could not load app %s. Error: %s (%d)\n",
@@ -411,9 +411,14 @@ int fpc_enroll_step(uint32_t *remaining_touches)
     if(ret < 0) {
         return -1;
     }
+    if(rec_cmd->ret_val < 0)
+        return rec_cmd->ret_val;
 
-    *remaining_touches = fpc_get_remaining_touches();
+    int touches = fpc_get_remaining_touches();
+    if(touches < 0)
+        return touches;
 
+    *remaining_touches = touches;
     return rec_cmd->ret_val;
 }
 
@@ -777,7 +782,7 @@ int fpc_init()
                              FP_TZAPP_NAME, 1024) < 0)
         return -1;
 
-    if (qsee_load_trustlet(&mHandle, KM_TZAPP_PATH,
+    if (qsee_load_trustlet(&mHdl, KM_TZAPP_PATH,
                              KM_TZAPP_NAME, 1024) < 0)
         return -1;
 
