@@ -84,3 +84,4 @@ BUILD_KERNEL := true
 
 # SELinux
 include device/sony/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/sony/common/sepolicy

@@ -1,0 +1,2 @@
+# HAL1 cam hack
+allow mediaserver camera_data_file:dir search;
