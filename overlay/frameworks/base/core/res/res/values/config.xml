@@ -162,12 +162,9 @@
     <!-- Wifi driver supports batched scan -->
     <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
 
-<<<<<<< HEAD
-=======
     <!-- MMS user agent string -->
     <!--<string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>-->
 
->>>>>>> d41346ee9ae285065c68111be9de61fc645f120e
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
