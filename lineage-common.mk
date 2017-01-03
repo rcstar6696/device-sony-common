@@ -28,7 +28,8 @@ USE_DEVICE_SPECIFIC_DATASERVICES := true
 
 # Lineage Packages
 PRODUCT_PACKAGES += \
-    Gello
+    Gello \
+    Snap
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
