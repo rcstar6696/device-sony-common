@@ -97,12 +97,12 @@
          have to be explicitly listed here, however it must have a signature
          that matches the signature of at least one package on this list.
          -->
-    <string-array name="config_locationProviderPackageNames" translatable="false">
+    <!--<string-array name="config_locationProviderPackageNames" translatable="false">-->
         <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
+        <!--<item>com.android.location.fused</item>-->
         <!-- The Google provider -->
-        <item>com.google.android.gms</item>
-    </string-array>
+        <!--<item>com.google.android.gms</item>-->
+    <!--</string-array>-->
 
     <!-- Array of allowable ConnectivityManager network types for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
@@ -159,7 +159,7 @@
     <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+    <!--<string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>-->
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>

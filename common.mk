@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Common path
-COMMON_PATH := device/sony/common
-
+COMMON_PATH := device/sony/common-aosp
+include device/sony/common-aosp/lineage-common.mk
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # Common Specific Permissions
@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf \
     $(COMMON_PATH)/rootdir/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config \
+    $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config.bak \
     $(COMMON_PATH)/rootdir/system/etc/sensors/sensors_settings:system/etc/sensors/sensors_settings
 
 # QMI
@@ -276,6 +276,9 @@ ifneq ($(filter shinano rhine, $(SOMC_PLATFORM)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0
 else
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1
 endif
