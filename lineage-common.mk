@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+BOARD_VENDOR := sony
+
 # Lineage Build
 TARGET_UNOFFICIAL_BUILD_ID := SonyLOS
 
