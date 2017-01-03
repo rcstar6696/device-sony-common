@@ -16,6 +16,10 @@
 ROM_BUILDTYPE := Rcstar6696-N
 ROM_VERSION := $(TARGET_PRODUCT)-$(shell date -u +%Y%m%d)-$(PLATFORM_VERSION)-$(BUILD_ID)-$(ROM_BUILDTYPE)
 
+# Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+
 # Bootanimation
 PRODUCT_COPY_FILES += \
 device/sony/common/rootdir/system/media/XPERIA-Bootanimation.zip:system/media/bootanimation.zip 
