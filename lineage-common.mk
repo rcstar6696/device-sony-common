@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The Android Open Source Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# CM Build
+BOARD_VENDOR := sony
+
+# Lineage Build
 TARGET_UNOFFICIAL_BUILD_ID := SonyLOS
 
 # Camera
@@ -24,12 +26,10 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 DEVICE_SPECIFIC_DATASERVICES := hardware/sony/dataservices
 USE_DEVICE_SPECIFIC_DATASERVICES := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/common/cmhw
-
-# CM Packages
+# Lineage Packages
 PRODUCT_PACKAGES += \
-    Gello
+    Gello \
+    Snap
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
