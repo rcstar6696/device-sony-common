@@ -20,15 +20,6 @@ ROM_VERSION := $(TARGET_PRODUCT)-$(shell date -u +%Y%m%d)-$(PLATFORM_VERSION)-$(
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
 
-# Test Props    
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.media.enc.jpeg.quality=100 \
-	video.accelerate.hw=1 \
-	debug.performance.tuning=1 \
-	ro.ril.disable.power.collapse=1 \
-	pm.sleep_mode=1 \
-	windowsmgr.support_rotation_270=true
-
 # Bootanimation
 PRODUCT_COPY_FILES += \
 device/sony/common/rootdir/system/media/XPERIA-Bootanimation.zip:system/media/bootanimation.zip 
