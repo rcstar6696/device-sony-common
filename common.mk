@@ -256,6 +256,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.speaker.prot.enable=true \
     persist.audio.spkcall_2mic=ON \
     ro.ril.enable.amr.wideband=1 \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicecomm=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
     media.aac_51_output_enabled=true \
     audio.deep_buffer.media=1
 
