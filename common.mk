@@ -248,13 +248,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fluencetype can be "fluence" or "fluencepro" or "none"
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence \
-    ro.qc.sdk.audio.ssr=true \
     persist.audio.fluence.mode=fluence \
-    persist.audio.voice.clarity=true \
-    persist.audio.aanc.enable=true \
-    persist.audio.handset_rx_type=DEFAULT \
-    persist.speaker.prot.enable=true \
-    persist.audio.spkcall_2mic=ON \
     ro.ril.enable.amr.wideband=1 \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicecomm=true \
