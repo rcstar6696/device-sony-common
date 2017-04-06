@@ -92,9 +92,3 @@ include device/sony/common/CommonRecoveryConfig.mk
 
 # SELinux
 include device/sony/sepolicy/sepolicy.mk
-
-# BT/FMRadio
-ifeq ($(BOARD_HAVE_BCM_FM), true)
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rfkilldisabled=1
-endif
