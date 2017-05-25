@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libemoji
 
+# RIL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full
+
 # ExtendedSettings
 PRODUCT_PACKAGES += \
     ExtendedSettings
@@ -169,6 +173,14 @@ PRODUCT_PACKAGES += \
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
+
+# librqbalance
+PRODUCT_PACKAGES += \
+    librqbalance
+
+# librqbalance enablement
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=/system/lib/librqbalance.so
 
 # APN list
 PRODUCT_COPY_FILES += \
@@ -245,7 +257,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.debug.level=1
 
 # Audio
-# Fluencetype can be "fluence" or "fluencepro" or "none"
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.mode=fluence \
@@ -289,18 +300,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.dc.frame.sync=0 \
     persist.camera.dcrf.enable=0
 
-# Camera Features
+# Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gyro.disable=1 \
-    persist.camera.stats.af.paaf=0 \
     persist.camera.feature.cac=0 \
     persist.camera.ois.disable=0 \
     persist.camera.zsl.mode=1
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=0 \
-    media.stagefright.less-secure=true \
-    media.stagefright.legacyencoder=true
 
 # Sensors debug
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -314,7 +319,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
 
 # BT/FMRadio
-ifeq ($(filter rhine kanuti,$(SOMC_PLATFORM)),)
+ifeq ($(filter rhine kanuti tone,$(SOMC_PLATFORM)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rfkilldisabled=1
 endif

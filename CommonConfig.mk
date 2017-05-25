@@ -52,7 +52,6 @@ AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 TARGET_USES_AOSP := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 BOARD_QTI_CAMERA_V2 := true
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # GPS definitions for Qualcomm solution
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
@@ -81,6 +80,7 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+DONT_DEXPREOPT_PREBUILTS := true
 
 BUILD_KERNEL := true
 -include device/sony/common-headers/KernelHeaders.mk
